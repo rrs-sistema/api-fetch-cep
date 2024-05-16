@@ -12,8 +12,8 @@ tivemos que implementar a funcionalidade de salvar os dados do endereço no Loca
 
 - Desenvolver uma tela onde o usuário possa inserir um CEP e, ao clicar em um botão.
 - Botão para consultar o dados do CEP via API de CEP.
-- Exibir as informações na tela
-- Botão para salvar os dados no cache do navegador
+- Exibir as informações na tela.
+- Botão para salvar os dados no cache do navegador.
 
 ## Como Usar
 
@@ -30,13 +30,13 @@ Abra o arquivo index.html no seu navegador web.
 
 1. Informe um CEP no campo: Informe o CEP que deseja consultar.
 2. Clique no botão consultar.
-3. Se desejar salvar as informações, clique no botão "Salvar"
+3. Se desejar salvar as informações, clique no botão "Salvar".
 
 ## Excluindo CEP cadastrado/salvo no cache do navegador
 1. Clique no botão "Deletar" no lado da informação que você deseja deletar".
 2. Será aberta uma caixa de alerta perguntando se você deseja realmente deletar.<br/>
    2.1 Se sim, clique no botão "Sim".<br/>
-   2.2 Se não, clique no botão "Não" e a tela será fechada.<br/>
+   2.2 Se não, clique no botão "Não" e a tela será fechada.<br/>.<br/>
 
 
 Contribuindo
