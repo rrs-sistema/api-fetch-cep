@@ -85,17 +85,12 @@ function criaCabecalhoTable() {
 
 function criarElemento(modelo) {
     const id = modelo.id;
-    /*
-    cep, logradouro, complemento, bairro, localidade, uf, ibge
-    */
-    // Create two new cells
     var cellTextothCEP = document.createElement("td");
     cellTextothCEP.id = id;
     cellTextothCEP.cep = modelo.cep;
     cellTextothCEP.innerHTML = modelo.cep;
     cellTextothCEP.style = 'text-align: center;';
-    //id, cep, logradouro, complemento, bairro, localidade, uf, ibge
-    // Create two new cells
+
     var cellTextoLogradouro = document.createElement("td");
     cellTextoLogradouro.id = id;
     cellTextoLogradouro.innerHTML = modelo.logradouro;
@@ -125,7 +120,7 @@ function criarElemento(modelo) {
     var row = document.createElement("tr");
     row.id = rowId;
     row.appendChild(cellTextothCEP);
-    cellTextothCEP.style = 'color: black;';
+    cellTextothCEP.style = 'color: black; text-align: center;';
 
     row.appendChild(cellTextoLogradouro);
     cellTextoLogradouro.style = 'color: black;';
@@ -148,9 +143,7 @@ function criarElemento(modelo) {
     const table = document.getElementById("table");
 
     table.appendChild(row);// Adiciona a linha na tabela
-    //limpaCamposAluno();
-
-    // mostrarOcultarBotaoCancelar(false) // Oculta o botão que cancela a alteração
+    limpaCampos();
 }
 
 function criaButtonGeneric(nome, className, funcao) {
@@ -164,17 +157,6 @@ function criaButtonGeneric(nome, className, funcao) {
     return button;
 }
 
-/*
-{
-    "cep": "81490-398",
-        "logradouro": "Rua Vinicios José Bório Júnior",
-            "complemento": "",
-                "bairro": "Campo de Santana",
-                    "localidade": "Curitiba",
-                        "uf": "PR",
-                            "ibge": "4106902"
-}
-*/
 class EnderecoModel {
     constructor(id, cep, logradouro, complemento, bairro, localidade, uf, ibge) {
         this.id = id;
@@ -194,7 +176,7 @@ function cepMascara(cep) {
     }
 }
 
-function limpaCampo() {
+function limpaCampos() {
     const inputCepConsulta = document.getElementById('inputCepConsulta');
     inputCepConsulta.value = '';
 
@@ -233,17 +215,6 @@ function apiFetch() {
         fetch(`https://viacep.com.br/ws/${cepFormatado}/json/`)
             .then(res => res.json())
             .then(json => {
-                /*
-                let model = new EnderecoModel();
-                model.id = ((cepArray === undefined || cepArray === null || cepArray.length === 0) ? 0 : (cepArray.length + 1));
-                model.cep = ;
-                model.logradouro = json.logradouro;
-                model.complemento = json.complemento;
-                model.bairro = json.bairro;
-                model.localidade = json.localidade;
-                model.uf = json.uf;
-                model.ibge = json.ibge;
-                */
                 const inputCep = document.getElementById('inputCep');
                 inputCep.value = json.cep;
                 const inputLogradouro = document.getElementById('inputLogradouro');
@@ -263,9 +234,9 @@ function apiFetch() {
                 showAlertModal(error);
             })
             .finally(_ => closeModalLoading())
-    }, 3.0 * 1000);
+    }, 2.0 * 1000);
 
-    limpaCampo();
+    limpaCampos();
 }
 
 function gravarInformacao() {
@@ -309,7 +280,7 @@ function efetuaGravacao() {
     var modalPergunta = document.getElementById('modalPergunta');
     modalPergunta.close();
     mostrarOcultarBotaoGravar(false);
-    limpaCampo();
+    limpaCampos();
 }
 
 function deletar(rowId) {
