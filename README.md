@@ -35,8 +35,8 @@ Abra o arquivo index.html no seu navegador web.
 ## Excluindo CEP cadastrado/salvo no cache do navegador
 1. Clique no botão "Deletar" no lado da informação que você deseja deletar".
 2. Será aberta uma caixa de alerta perguntando se você deseja realmente deletar.
-  2.1 Se sim, clique no botão "Sim".
-  2.2 Se não, clique no botão "Não" e a tela será fechada.
+   2.1 Se sim, clique no botão "Sim".
+   2.2 Se não, clique no botão "Não" e a tela será fechada.
 
 
 Contribuindo
