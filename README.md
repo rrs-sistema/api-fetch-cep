@@ -5,7 +5,7 @@ O objetivo foi desenvolver uma tela onde o usuário possa inserir um CEP e, ao c
 a aplicação deve consultar uma API de CEP para obter os dados do endereço correspondente e exibi-los na tela. Além disso, 
 tivemos que implementar a funcionalidade de salvar os dados do endereço no Local Storage do navegador.
 
-<img src="./assets/img/tela-principal.png" width="450" height="350">
+<img src="./src/assets/img/tela-principal.png" width="450" height="350">
 
 
 ## Funcionalidades
