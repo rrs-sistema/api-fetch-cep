@@ -1,0 +1,164 @@
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.childBody {
+  position: sticky;
+  top: 15%;
+  left: 5%;
+  right: 5%;
+}
+
+.input_text {
+  width: 150px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+#modalAlerta {
+    width: 450px;
+    height: 150px;
+    background-color:#000000; /* #5da4b8; */
+    border-radius: 10px;
+    padding: 20px;
+    align-content: start;
+    padding: 5px;
+    border-color: white;
+}
+
+#modalLoading {
+    width: 100px;
+    height: 100px;
+    background-color:white;
+    border-radius: 10px;
+    align-content: center;
+    border: #ccc;
+}
+
+.headerModal {
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    float: none;
+    font-size: 22px;
+}
+
+.mensagemAlerta {
+    color: white;
+    align-items: center;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+#closeDialogFooter {
+    background-color: gray;
+    color: white;
+    padding: 10px 45px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-color: white;
+}
+
+.styleCab {
+  background-color: cadetblue;
+}
+
+.styleOne {
+  background-color: #c1c1c1;
+}
+
+.styleOne:hover {
+  background-color: rgb(181, 198, 216);
+}
+
+.styleTwo {
+  background-color: #A9A9A9;
+}
+
+.styleTwo:hover {
+  background-color: rgb(181, 198, 216);
+}
+
+.btn_generic {
+  width: 10%;
+  color: white;
+  padding: 5px 5px;
+  margin: 2px 2px;
+  width: 55px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn_consultar {
+  background-color: #000000;
+  position: relative;
+    left: -5px;
+    border-radius: 0 25px 25px 0;
+    width: 150px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;  
+}
+
+.btn_gravar {
+  background-color: #18aff5;
+  position: relative;
+    left: 10px;
+    border-radius: 15px 15px 15px 15px;
+    width: 250px;
+    height: 42px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;  
+}
+
+.btn_gravar:hover {
+  background-color: #0d3a9c;
+}
+
+.btn_deletar {
+  background-color: #fd0505;
+}
+
+.btn_deletar:hover {
+  background-color: #f06565;
+}
+
+.btn_novo:hover {
+  background: #222121;
+}
+
+.labelCep  {
+  margin-left: 15px !important; 
+  font-size: 20px !important; 
+}
+
+.inputTextCep {
+  width: 290px;
+  padding: 12px 5px;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  margin-top: 5px !important; 
+  height: 46px;
+  border: 1;
+  outline: invert;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
+

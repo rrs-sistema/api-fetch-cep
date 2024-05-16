@@ -1,0 +1,92 @@
+#modalPergunta {
+    width: 450px;
+    height: 150px;
+    background-color: #000000; 
+    border-radius: 10px;
+    padding: 20px;
+    align-content: start;
+    padding: 5px;
+    border-color: white;
+}
+
+#simModalPergunta {
+  background-color: red;
+  border: none;
+  color: #000000;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#snaoModalPergunta {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#footerModalPergunta {
+    background-color: transparent;
+    color: white;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-color: white;
+}
+
+.mediaAlunoModal {
+    color: white;
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+#simModalPergunta {
+  background-color: blueviolet;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#snaoModalPergunta {
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.headerModal {
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    float: none;
+    font-size: 22px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

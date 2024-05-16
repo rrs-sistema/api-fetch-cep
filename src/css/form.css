@@ -1,0 +1,31 @@
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 48%;
+}
+
+.right {
+  width: 49%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inputTextVisualizacao {
+  width: 95%;
+  margin-left: 5px;
+  margin-top: 5px !important; 
+  height: 36px;
+  border: 1;
+  outline: invert;
+  padding: 0 25px;
+  border-radius: 10px 10px 10px 10px;
+}

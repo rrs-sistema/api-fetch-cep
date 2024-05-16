@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>API Fetch - CEP</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen'
+            href='./src/css/main.css'>
+        <link rel='stylesheet' type='text/css' media='screen'
+            href='./src/css/form.css'>
+        <link rel='stylesheet' type='text/css' media='screen'
+            href='./src/css/modal.css'>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+        <script src='./src/js/main.js'></script>
+    </head>
+    <body class="body">
+        <div class="childBody" style="width: 100%;">
+            <div>
+                <label for="inputCepConsulta" class="labelCep">CEP</label>
+                <br />
+                <input type="text" name="inputCepConsulta" id="inputCepConsulta"
+                    placeholder="Informe o CEP que deseja consultar"
+                    onkeypress="cepMascara(this)"
+                    class="inputTextCep" autocomplete="off" minlength="8"
+                    maxlength="9">
+                <input type="button" value="Consultar" onclick="apiFetch()"
+                    class="btn_consultar btn_generic">
+            </div>
+
+            <fieldset>
+                <legend>Dados do endereço consultado</legend>
+                <div class="row">
+                    <div class="column left">
+                        <label for="inputCep">CEP:</label>
+                        <input type="text" id="inputCep" name="inputCep"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+                    <div class="column right">
+                        <label for="inputLogradouro">Logradouro:</label>
+                        <input type="text" id="inputLogradouro"
+                            name="inputLogradouro"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+
+                    <div class="column left">
+                        <label for="inputBairro">Bairro:</label>
+                        <input type="text" id="inputBairro" name="inputBairro"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+
+                    <div class="column right">
+                        <label for="inputCidade">Cidade:</label>
+                        <input type="text" id="inputCidade" name="inputCidade"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+
+                    <div class="column left">
+                        <label for="inputUF">UF:</label>
+                        <input type="text" id="inputUF" name="inputUF"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+
+                    <div class="column right">
+                        <label for="inputIBGE">IBGE:</label>
+                        <input type="text" id="inputIBGE" name="inputIBGE"
+                            class="inputTextVisualizacao" readonly>
+                    </div>
+
+                </div>
+                <input type="button" value="Salvar" onclick="gravarInformacao()"
+                    class="btn_gravar btn_generic" id="btn_gravar">
+            </fieldset>
+
+            <div id="div_lista_de_alunos">
+                <table id="table" style="width: 100%;"></table>
+            </div>
+
+            <dialog id="modalAlerta">
+                <header>
+                    <h3 class="headerModal" id="tituloAlerta"></h3>
+                </header>
+                <section class="mensagemAlerta" id="mensagemAlerta"></section>
+                <footer>
+                    <button onclick="closeModalAlerta()"
+                        id="closeDialogFooter">Sair</button>
+                </footer>
+            </dialog>
+
+            <dialog id="modalPergunta">
+                <header>
+                    <h3 class="headerModal" id="tituloModalPergunta"></h3>
+                </header>
+                <section class="mediaAlunoModal"
+                    id="mensagemModalPergunta"></section>
+                <footer id="footerModalPergunta">
+                    <button onclick="closeModalPergunta()"
+                        id="snaoModalPergunta">Não</button>
+
+                    <button type="button" id="simModalPergunta">Sim</button>
+                </footer>
+            </dialog>
+
+            <dialog id="modalLoading">
+                <section>
+                    <img src="./src/img/loading.gif" height="90" width="90">
+                </section>
+            </dialog>
+        </div>
+    </body>
+</html>
